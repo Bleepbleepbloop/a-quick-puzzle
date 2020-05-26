@@ -26,6 +26,26 @@ you want. </p>
 
 <!-- LOOP OVER ALL OF THE USER'S GUESSES HERE -->
   <!-- Here's the first guess -->
+
+  <%# <%=session.fetch(:guess_history) %>
+
+  <% @old_results.each_index do |pos| %>
+    <li>
+    <%= @old_results[pos] %>
+    <%= @old_results[pos].fetch("first")%>
+    <%# <%= zebra.fetch("second") %>
+    <%# <%= zebra.fetch("last_third") %>
+    </li> %>
+  <% end %>
+
+
+
+
+
+  <%# <%=session.fetch(:last_first)%>
+  <%# <%=session.fetch(:last_second)%>
+  <%# <%=session.fetch(:last_third)%>
+
   <p class="lead">
     <span class="badge badge-success">
       3
